@@ -1,11 +1,22 @@
 I like to sing
 I like to paint
-I like to play games
+I like to have a friend
 I like hot chocolate
+<<<<<<< HEAD
 I like to smile
 I like to read
 I like to stay quiet
 I like to design houses very much
 I like geography
 I like lego
+=======
+I don't like cold icecream
+I like to read
+I like to stay quiet
+I like to design houses
+I like to listen to the wind
+I like woods
+I like a nice nap
+I like to smile
+>>>>>>> Alex
 hahahhahaha
