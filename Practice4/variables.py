@@ -1,56 +1,33 @@
+# Store Scottish population data (in millions) for different years
+# 2004 population: 5.08 million
+a = 5.08
+# 2014 population: 5.33 million
+b = 5.33
+# 2024 population: 5.55 million
+c = 5.55
 
-# Known data (2022 statistics provided in practical guidelines):
-# - Total population of Scotland: 5,436,600
-# - Population of Glasgow: 635,130
-# - Population of Edinburgh: 526,470
+# Calculate population change between 2004 and 2014 (b - a)
+d = b - a
+# Calculate population change between 2014 and 2024 (c - b)
+e = c - b
 
-# 1. Define variables to store population data (integer type)
-scotland_pop = 5436600
-glasgow_pop = 635130
-edinburgh_pop = 526470
+# Print results for verification
 
-# 2. Calculate percentage of population in Glasgow (relative to Scotland)
-glasgow_percent = (glasgow_pop / scotland_pop) * 100
-# Calculate percentage of population in Edinburgh (relative to Scotland)
-edinburgh_percent = (edinburgh_pop / scotland_pop) * 100
+print(f"2004 population (a): {a} million")
+print(f"2014 population (b): {b} million")
+print(f"2024 population (c): {c} million")
+print(f"Population change 2004-2014 (d = b - a): {d} million")
+print(f"Population change 2014-2024 (e = c - b): {e} million")
 
-# 3. Calculate total population of Glasgow and Edinburgh combined
-two_cities_total = glasgow_pop + edinburgh_pop
-# Calculate combined percentage of the two cities
-two_cities_percent = (two_cities_total / scotland_pop) * 100
+# Compare d and e, and comment on population growth trend
 
-# 4. Print results (formatted to 2 decimal places for readability)
-print("=== 4.1 Scottish Population Calculation Results ===")
-print(f"Total population of Scotland: {scotland_pop:,}")  # Add thousand separators
-print(f"Glasgow population percentage: {glasgow_percent:.2f}%")
-print(f"Edinburgh population percentage: {edinburgh_percent:.2f}%")
-print(f"Total population of Glasgow + Edinburgh: {two_cities_total:,}")
-print(f"Combined percentage of two cities: {two_cities_percent:.2f}%")
-
-# ===================== 4.2 Boolean Variables & Truth Table =====================
-# 1. Define boolean variables X, Y, W as specified in practical guidelines
-X = True
-Y = False
-W = True
-
-# 2. Print variable values to verify definitions
-print("\n=== 4.2 Boolean Variable Definitions ===")
-print(f"X = {X}, Y = {Y}, W = {W}")
-
-# 3. Truth table explanation (required for portfolio assessment)
-"""
-Truth table based on X=True, Y=False, W=True:
-1. X and Y → True and False = False
-2. X or Y → True or False = True
-3. not X → not True = False
-4. (X and Y) or W → (False) or True = True
-5. X and (Y or W) → True and (False or True) = True
-"""
-
-# 4. Verify truth table (optional: execute logical operations for self-check)
-print("\n=== Logical Operation Verification ===")
-print(f"X and Y = {X and Y}")
-print(f"X or Y = {X or Y}")
-print(f"not X = {not X}")
-print(f"(X and Y) or W = {(X and Y) or W}")
-print(f"X and (Y or W) = {X and (Y or W)}")
+if d > e:
+    print(f"d ({d} million) is larger than e ({e} million).")
+    # Answer to the question: Is population growth accelerating or decelerating?
+    # Population growth is decelerating, as the absolute increase in population is smaller in the later decade.
+elif e > d:
+    print(f"e ({e} million) is larger than d ({d} million).")
+    # Population growth is accelerating, as the absolute increase in population is larger in the later decade.
+else:
+    print(f"d ({d} million) and e ({e} million) are equal.")
+    # Population growth rate remains unchanged between the two decades.
