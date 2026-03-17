@@ -1,0 +1,3 @@
+Everything goes well in the beginning. But I kept fogetting to type "git add", and I didn't realise that I'm typing inthe terminal of powershell rather than bash. This might be the reason I failed to push the text to GitHub severaltimes.
+It is challenging to keep track of what we have already done.
+I don't understand why the same codes can cause different
