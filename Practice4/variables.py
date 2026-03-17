@@ -30,7 +30,21 @@ elif e > d:
     # Population growth is accelerating, as the absolute increase in population is larger in the later decade.
 else:
     print(f"d ({d} million) and e ({e} million) are equal.")
-    # Population growth rate remains unchanged between the two decades.
+    # Population growth rate remains unchanged between the two decade
 
-   # Answer to the question: Is population growth accelerating or decelerating?
-   #decellerating, because the increase in population from 2014 to 2024 (0.22 million) is smaller than the increase from 2004 to 2014 (0.25 million).
+    # Task: Compare d and e. Determine if growth is accelerating or decelerating
+# Record your answer as a comment below
+# Answer: Since d (0.25 million) is larger than e (0.22 million), the population growth is decelerating in Scotland.
+
+# ===================== 4.2 Booleans =====================
+# Task 1: Create variables X and Y (X = True, Y = False)
+X = True
+Y = False
+
+# Task 2: Create variable W which encodes "X or Y"
+W = X or Y
+
+# Print Boolean values for verification
+print("\n=== 4.2 Boolean Variables ===")
+print(f"X = {X}, Y = {Y}")
+print(f"W = X or Y = {W}")
