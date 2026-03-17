@@ -23,7 +23,7 @@ print(f"Population change 2014-2024 (e = c - b): {e} million")
 
 if d > e:
     print(f"d ({d} million) is larger than e ({e} million).")
-    # Answer to the question: Is population growth accelerating or decelerating?
+ 
     # Population growth is decelerating, as the absolute increase in population is smaller in the later decade.
 elif e > d:
     print(f"e ({e} million) is larger than d ({d} million).")
@@ -31,3 +31,6 @@ elif e > d:
 else:
     print(f"d ({d} million) and e ({e} million) are equal.")
     # Population growth rate remains unchanged between the two decades.
+
+   # Answer to the question: Is population growth accelerating or decelerating?
+   #decellerating, because the increase in population from 2014 to 2024 (0.22 million) is smaller than the increase from 2004 to 2014 (0.25 million).
