@@ -10,4 +10,4 @@ while ini>=91:
 	break
 print (j,"days")
 
-
+#Answer: the number of days until the number of infected people reaches 91 or more is 9 days
