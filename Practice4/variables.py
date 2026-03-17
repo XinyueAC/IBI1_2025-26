@@ -48,3 +48,7 @@ W = X or Y
 print("\n=== 4.2 Boolean Variables ===")
 print(f"X = {X}, Y = {Y}")
 print(f"W = X or Y = {W}")
+
+#Truth table for "or" operator:
+# X     Y     W=X or Y
+# True  False  True
