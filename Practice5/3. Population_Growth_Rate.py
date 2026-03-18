@@ -23,7 +23,7 @@ largest_increase_country = countries[sorted_indices[0]]
 largest_decrease_country = countries[sorted_indices[-1]]
 print(f"\nCountry with the largest increase: {largest_increase_country}")
 print(f"Country with the largest decrease: {largest_decrease_country}")
-#创建一个带有标签的条形图，显示每个国家的人口变化。
+#create a bar chart to visualize the percentage change in population for each country using matplotlib. Label the x-axis as "Country", the y-axis as "Percentage Change in Population (%)", and give the chart a title "Population Change from 2020 to 2024". Rotate the x-axis labels for better readability if necessary.
 plt.figure(figsize=(10, 6))
 plt.bar(countries, percentage_change, color=['blue', 'orange', 'green', 'red', 'purple'])
 plt.xlabel('Country')
