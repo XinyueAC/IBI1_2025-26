@@ -2,6 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 heart_rates	=[72,60,126,85,90,59,76,131,88,121,64]
+np.append (heart_rates, [55, 130, 78]) # Add new heart rate measurements to the list
 #calculate and print the average heart rate from the list of heart rate measurements.
 average_heart_rate = np.mean(heart_rates)
 print(f"The average heart rate is {average_heart_rate:.2f} bpm.")
