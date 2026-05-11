@@ -85,3 +85,66 @@ plt.title('SIR Model')
 plt.legend()
 plt.savefig('SIR_plot.png') # 保存图片
 plt.show()
+
+
+
+# SIR.py
+# 导入必要的库
+import numpy as np
+import matplotlib.pyplot as plt
+
+# 1. 定义模型的基本参数
+N = 10000          # 总人口
+beta = 0.3         # 接触感染率
+gamma = 0.05       # 康复率
+T = 1000           # 模拟的总时间步长
+
+# 初始人群状态
+S_count = 9999     # 易感人数 (Susceptible)
+I_count = 1        # 初始感染人数 (Infected)
+R_count = 0        # 康复人数 (Recovered)
+
+# 用于记录随时间变化的数据的数组 (列表)
+S_history = [S_count]
+I_history = [I_count]
+R_history = [R_count]
+
+# 2. 模拟时间过程
+for t in range(T):
+    # 计算当前时间点每个易感者被感染的概率 (需乘以人群中感染者的比例)
+    p_infect = beta * (I_count / N)
+    
+    # 确保概率不超过 1 (边界条件保护)
+    p_infect = min(p_infect, 1.0)
+    
+    # 使用 np.random.choice 模拟人群的随机转移 
+    # 对于每个易感者，依据概率 p_infect 决定是否变为感染者 (1为感染，0为未感染)
+    new_infections = np.sum(np.random.choice([0, 1], size=S_count, p=[1 - p_infect, p_infect]))
+    
+    # 对于每个感染者，依据概率 gamma 决定是否康复
+    new_recovered = np.sum(np.random.choice([0, 1], size=I_count, p=[1 - gamma, gamma]))
+    
+    # 更新各人群总数
+    S_count -= new_infections
+    I_count += (new_infections - new_recovered)
+    R_count += new_recovered
+    
+    # 记录当前时间点的数据
+    S_history.append(S_count)
+    I_history.append(I_count)
+    R_history.append(R_count)
+
+# 3. 绘制并保存结果
+plt.figure(figsize=(6, 4), dpi=150)
+plt.plot(S_history, label='susceptible')
+plt.plot(I_history, label='infected')
+plt.plot(R_history, label='recovered')
+
+plt.title('SIR model')
+plt.xlabel('time')
+plt.ylabel('number of people')
+plt.legend()
+
+# 保存图像并显示
+plt.savefig("SIR_model.png", type="png")
+plt.show()
