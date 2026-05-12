@@ -9,10 +9,12 @@ import matplotlib.pyplot as plt
 
 df = pd.read_csv("D:\糖糖\大学\IBI\IBI1_2025-26\IBI1_2025-26\Practical10\dalys-rate-from-all-causes.csv")
 
+afghanistan_data = df[df['Entity'] == 'Afghanistan']
+print(afghanistan_data[['Year', 'DALYs']].head(10))
 
-first_10_rows = df.iloc[:10, [2, 3]]
-print("--- First 10 rows (Year and DALYs) ---")
-print(first_10_rows)
+#first_10_rows = df.iloc[:10, [2, 3]]
+#print("--- First 10 rows (Year and DALYs) ---")
+#print(first_10_rows)
 
 # [Required Comment]: What year reported the maximum DALYs across the first 10 years for Afghanistan?
 # Based on the printed data for the first 10 years (1990-1999), 
