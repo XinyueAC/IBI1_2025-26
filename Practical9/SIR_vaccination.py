@@ -13,7 +13,7 @@ plt.figure(figsize=(6,4), dpi=150)
 
 for i, vac_rate in enumerate(vaccine_rates):
     V = int(N * vac_rate)
-    S = N - V - 1
+    S = max(N - V - 1, 0)
     I = 1
     R = 0
     
@@ -21,6 +21,9 @@ for i, vac_rate in enumerate(vaccine_rates):
     
     for t in range(T):
         infection_prob = beta * (I / N)
+
+        S = max(S, 0)
+
         new_infected = np.random.binomial(S, infection_prob)
         new_recovered = np.random.binomial(I, gamma)
         
