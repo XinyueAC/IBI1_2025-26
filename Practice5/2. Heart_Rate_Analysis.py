@@ -16,6 +16,17 @@ for hr in heart_rates:
     else: 
         resting_heart_rate_categories["high"] += 1
 
+# --- new ---
+
+total_patients = sum(resting_heart_rate_categories.values())
+print(f"\nTotal number of patients: {total_patients}")
+
+
+most_frequent_category = max(resting_heart_rate_categories, key=resting_heart_rate_categories.get)
+max_count = resting_heart_rate_categories[most_frequent_category]
+print(f"The most frequent category is '{most_frequent_category}' with {max_count} patients.")
+# --- new ---
+
 # print the number of patients in each heart rate category
 for category, count in resting_heart_rate_categories.items():
     print(f"{category}: {count} patients")
