@@ -77,3 +77,6 @@ with open("Saccharomyces_cerevisiae.R64-1-1.cdna.all.fa", "r") as f_in, open("st
         #    stops_str = ";".join(found_stops)
         #    new_header = f">{gene_id};{stops_str}"
         #    write_fasta(new_header, seq_combined, f_out)
+
+
+

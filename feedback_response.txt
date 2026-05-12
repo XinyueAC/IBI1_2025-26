@@ -1,0 +1,12 @@
+Practical 3:
+I got an 100. Thus I made no changes.
+
+Practical 4:
+Completed the truth table comment by adding all 4 possible combinations of X and Y for the or operator.
+Fixed the infection growth script to display the number of infected students every day and clearly show the final day count and total infected number.
+Corrected the random number loop to generate exactly 10 random numbers instead of 11.
+
+Practical 5:
+Updated the heart rate analysis script to print the total number of patients and explicitly state the most frequent heart rate category.
+
+
