@@ -51,4 +51,11 @@ print(f"W = X or Y = {W}")
 
 #Truth table for "or" operator:
 # X     Y     W=X or Y
-# True  False  True
+# True   False  True
+
+# Truth table for "or" operator:
+# X      Y      W = X or Y
+# True   True   True
+# True   False  True
+# False  True   True
+# False  False  False

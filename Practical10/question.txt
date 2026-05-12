@@ -1,0 +1,8 @@
+Question: 
+What is the overall average DALYs (Disability-Adjusted Life Years) rate for the United Kingdom across all recorded years in the dataset?
+
+Line number: 
+The code addressing this question is located at approximately Line 65 in the dalys.py file (under section 6).
+
+Discussion of the result: 
+The code successfully isolates the data pertaining to the 'United Kingdom' using a Boolean mask condition (`df['Entity'] == 'United Kingdom'`). By applying the `.mean()` function to the 'DALYs' column of this subset, it calculates the historical average burden of disease for the country spanning the entire recording period (1990-2019). This single statistical metric is useful for epidemiologists as a baseline to evaluate whether the health burden in recent years is improving 
